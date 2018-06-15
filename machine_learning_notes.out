@@ -1,0 +1,21 @@
+\BOOKMARK [1][-]{section.1}{Rules of thumb}{}% 1
+\BOOKMARK [1][-]{section.2}{Resources}{}% 2
+\BOOKMARK [1][-]{section.3}{Week 6 - Machine Learning Diagnostics}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Learning Curves - figuring out if you have high bias or high variance}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{Debugging a learning algorithm}{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Skewed Classes}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{very large datasets}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Week 7: Unsupervised Learning }{}% 8
+\BOOKMARK [1][-]{section.5}{Week 9:Anomaly Detection }{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Normal distribution}{section.5}% 10
+\BOOKMARK [2][-]{subsection.5.2}{Parameter Estimation}{section.5}% 11
+\BOOKMARK [2][-]{subsection.5.3}{Density estimation}{section.5}% 12
+\BOOKMARK [3][-]{subsubsection.5.3.1}{Anomaly detection algorithm}{subsection.5.3}% 13
+\BOOKMARK [1][-]{section.6}{Notes Coursera Week 10: Large Scale Machine Learning }{}% 14
+\BOOKMARK [2][-]{subsection.6.1}{Vid1: Learning with Large Datasets}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.2}{Vid2: Computationally efficient methods: Stochastic Gradient Descent}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.3}{Vid3: Mini-Batch Gradient Descent}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.4}{Vid4: Stochastic Gradient Descent Convergence}{section.6}% 18
+\BOOKMARK [2][-]{subsection.6.5}{Vid5: Online Learning}{section.6}% 19
+\BOOKMARK [2][-]{subsection.6.6}{Vid6: Map reduce and Data Parallelism}{section.6}% 20
+\BOOKMARK [1][-]{section.7}{Week 11: Where to allocate scarce resources?}{}% 21
