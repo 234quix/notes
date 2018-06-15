@@ -1,0 +1,81 @@
+\documentclass[fontsize=11]{article}
+\usepackage{amsmath,amssymb, mathtools}
+\usepackage{tabularx}
+\usepackage{ltablex}
+\usepackage[margin=1.5cm]{geometry}
+\usepackage{multirow}
+\usepackage{listings}
+\lstset{
+basicstyle=\small\ttfamily,
+columns=flexible,
+breaklines=true
+}
+\usepackage{hyperref}
+%\newcommand{\hidden}[1]{#1}
+\newcommand{\hidden}[1]{}
+\newcolumntype{b}{>{\hsize=1.5\hsize}X}
+\newcolumntype{m}{>{\hsize=1.2\hsize}X}
+\newcolumntype{s}{>{\hsize=0.3\hsize}X}
+
+\begin{document}
+
+\section{Python Quiz}
+
+\renewcommand{\arraystretch}{2}
+\begin{tabularx}{\linewidth}{sbm}
+random & Random integer between 2 and 20 & \hidden{\verb~random.randint(2, 20)~}  \\
+numpy & array of 30 points from 0 to 10 & \hidden{\verb~np.linspace(0, 10, 30) ~}\\
+numpy: distribution& 30 points sampled from a gaussian dist with mean 0 &  \hidden{\verb~np.random.normal(size=30)~} \\
+& &\hidden{\verb~np.random.normal(mu, sigma, 1000)~} \\
+& 30 points sampled from uniform dist between $[0,1)$ & \hidden{\verb~numpy.random.random(size=30)~} \\
+& get max of numpy array x & \hidden{\verb~x.max()~}\\
+& get max of each row of numpy array x & \hidden{\verb~x.max(axis=1)~}\\
+& Simulate 500 coin "fair" coin tosses (where the probabily of getting Heads is 50\%, or 0.5)& \hidden{\verb~x = np.random.binomial(500, .5)~ (x is number of heads)}\\
+& Repeat the previous simulation 500 times & \hidden{\begin{lstlisting}^^J heads = np.random.binomial(500, .5, size=500)^^J 
+\end{lstlisting}} \\
+& Generate a random integer between [0,3], n times & \hidden{\verb~np.random.randint(0, 3, n)~}\\
+pandas: dataframes & Remove rows from df where certain column has missing data& \hidden{\verb~df = df[df.year.notnull()]~}\\
+& Convert df column to type int& \hidden{\verb~df.rating_count.astype(int)~}\\
+& Create a histogram from a dataframe column without matplotlib& \hidden{\verb~df.rating.hist();~}\\
+ & rescale the x-axis of plot to be logarithmic & \hidden{\verb~plt.xscale("log");~}\\
+& Create scatter plot of 2 df columns and set transparency to check density&  \hidden{\begin{lstlisting}^^J
+plt.scatter(df.year, df.rating, lw=0, alpha=.08)
+^^J \end{lstlisting}} \\
+& Set  x axis limits & \hidden{\verb~plt.xlim([1900,2010])~}\\
+& Square the elements in a list via a list comprehension& \hidden{\verb~[i*i for i in alist]~}\\
+& Add 2 numpy arrays together (they're vectorized) & \hidden{\verb~np.array(alist)+np.array(alist)~}\\
+& How find index of a certain element of a list? e.g. a list called planets, which have string elements corresponding to planets & \hidden{\verb~planets.index('Earth')~}\\
+& Check if variable is of int type & \hidden{\verb~type(a)==types.IntType~}\\
+& Combine corresponding elements of 2 lists (of equal length) into new list which is a list of tuples  & \hidden{\verb~zip(alist, asquaredlist)~}\\
+& What does enumerate do? & \hidden{gives a list of tuples with each tuple of the form (index, value)}\\
+& How would you iterate over a list of integers upto N & \hidden{can use range or xrange, xrange is better because it generates one integer at a time}\\
+& example of above & \hidden{\verb~for i in xrange(10):~}\\
+Dictionaries & give an example dictionary definition& \hidden{\verb~adict={'one':1, 'two': 2, 'three': 3}~}\\
+& get items of dictionary as a list & \hidden{\verb~adict.items()~}\\
+& get values of dictionary as a list & \hidden{\verb~adict.values()~}\\
+& given two lists, say \verb~keys~, and \verb~values~ create a dictionary, where  each (key,value) is now an item pair &   \hidden{\begin{lstlisting}^^J
+\{ind: value for ind, value in zip(keys, values)\}
+^^J \end{lstlisting}} \\
+Strings & join list of words with ',' & \hidden{\verb~newstring=",".join(wordslist)~} \\
+Error & How to catch errors & \hidden{\verb~try:~ } \\
+handing & & \hidden{\verb~       f(1)#takes atleast 2 arguments ~ } \\
+ & & \hidden{\verb~except:~} \\
+& & \hidden{\verb~    import sys~} \\
+& & \hidden{\verb~    print sys.exc_info()~} \\
+iterators & what's the difference between dict.items and dict.iteritems if you use either in a loop  & \hidden{items() creates the items all at once and returns a list. iteritems() returns a generator--a generator is an object that "creates" one item at a time every time next() is called on it} \\
+Lambda fns & Write a lambda function that takes 2 numbers and returns the sum& \hidden{\verb~f = lambda x, y : x + y~} \\
+& Suppose you had a list of tuples, called topfreq, where every item was a (word, freq) pair how would you plot a bar chart using matplotlib of the words and the frequency? & \hidden{\verb~pos = np.arange(len(topfreq))~}   \\
+&&  \hidden{\verb~plt.bar(pos, [e[1] for e in topfreq]);~} \\
+&&  \hidden{\verb~plt.xticks(pos+0.4, [e[0] for e in topfreq]);~}  \\
+&&  \hidden{\verb~plt.xticks(pos+0.4, [e[0] for e in topfreq]);~}  \\
+Loops & Give an example of iterating over elements of a list &  \hidden{\verb~for foo in x:~}\\
+& Give an example of iterating over the indices of a list & \hidden{\verb~for i in range(len(x)):~}  \\
+& Give an example of iterating over both elements and indices of list & \hidden{\verb~for i, num in enumerate(nums):~} \\
+&  & \hidden{\verb~~} \\
+&  & \hidden{\verb~~} \\
+&  & \hidden{\verb~~} \\
+&  & \hidden{\verb~~} \\
+\end{tabularx}
+
+
+\end{document}
